@@ -1,0 +1,128 @@
+body, html{
+	margin:0;
+	padding:0;
+	height: 100%;
+	width: 100%;
+	background-image: url(images/numbers.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+
+header{
+	display: flex;
+	align-content: center;
+	justify-content: flex-end;
+	height: 60px;
+	background-color: #333333;
+}
+header ul{
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+header ul li{
+	display: inline-block;
+}
+
+header ul li a{
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+	outline:0;
+	border-radius: 18px;
+	background-color: #fed053;
+	padding: 10px;
+}
+
+
+.about{
+	display: flex;
+	justify-content: center;
+	margin: 15px 10%;
+	width:80%;
+	background-color: white;
+	border-radius: 40px;
+}
+
+.about img{
+	margin: 10px;
+	height: 200px;
+	width: 250px;
+	background-position: center;
+	background-size: cover;
+}
+
+.aboutcontent{
+	font-size: 20px;
+	padding-left: 50px;
+}
+
+.work{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 15px 10%;
+	width:80%;
+	background-color: white;
+	border-radius: 40px;
+}
+
+
+.card{
+	display: inline-block;
+	height: 300px;
+	width: 300px;
+	margin: 30px 30px;
+	border-radius: 20px;
+
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/para2.jpg);
+}
+
+.card:hover{
+	background-image: url(images/para2.jpg);
+	transform: translateY(4px);
+	transition: 0.2s ease-in;
+}
+
+.workheading{
+	text-align: center;
+	font-size: 30px;
+	width: 100%
+}
+
+.card p{
+	text-align: center;
+	font-size: 25px;
+	color: white;
+	margin-top: 40%;
+}
+
+.contactinfo{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 15px 10%;
+	width:80%;
+	background-color: white;
+	border-radius: 40px;
+}
+
+.contactinfo p{
+	width: 100%;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.contactinfo img{
+	background-size: cover;
+	background-position: center;
+}
+
+.contactinfo a{
+	margin:30px;
+}

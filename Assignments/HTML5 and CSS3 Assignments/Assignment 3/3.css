@@ -1,0 +1,70 @@
+body, html{
+
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.para1{
+	background-image: url(images/para1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed; 
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.para2{
+	background-image: url(images/para2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.para3{
+	background-image: url(images/para3.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+h1{
+	color: white;
+	padding: 20px;
+	font-size: 60px;
+	border:2px solid white;
+	border-radius: 16px;
+}
+.para3 h1{
+	color: black;
+	padding: 20px;
+	font-size: 60px;
+	border:2px solid black;
+	border-radius: 16px;
+}
+
+.content{
+	background-color: #333333;
+	text-align: center;
+	color: #fed053;
+	font-size: 25px;
+	height: auto;
+	padding: 20px;
+}
