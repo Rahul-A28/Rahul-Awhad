@@ -1,0 +1,15 @@
+body{
+	background-color: rgb(224,255,255);
+}
+h1{
+	margin:0px;
+	font-weight: bold;
+	background-color: rgb(100,149,237);
+}
+div{
+	margin:0px;
+	background-color: rgb(176,196,222);
+}
+div p{
+	background-color: rgb(224,255,255);
+}

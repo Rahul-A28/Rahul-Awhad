@@ -1,0 +1,11 @@
+body{
+	background-color: rgb(224,255,255);
+}
+a{
+	color: red;
+	text-decoration: underline;
+}
+a:visited{
+	text-decoration: underline;
+	color: green;
+}
