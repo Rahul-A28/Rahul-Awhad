@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page 2 Question 2</title>
+	<script type="text/javascript">
+		
+		function map(arr,test){
+			console.log(test(arr[1]));
+			if(arr.length===0){
+				return [];
+			}
+
+					
+			return [test(arr[0])].concat(map(arr.slice(1,),test));
+
+		}
+
+		function square(x){
+			return x*x;
+		}
+
+
+		function start(){
+			var x = document.getElementById("no").value.split(",");
+
+			for(var i=0;i<x.length;i++){
+				x[i] = parseInt(x[i]);
+			}
+
+
+			var ans = map(x,square);
+			var ans2 = map(ans,Math.sqrt);
+			document.getElementById("answer").innerHTML = "Answer: Squares -> " + ans + "<br>Square roots -> " + ans2;
+		}
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+	<p>2. Make a “pure” recursive version of map. Hint: remember the slice and concat methods of arrays.<br>
+map([1, 2, 3, 4, 5], square); --> [1, 4, 9, 16, 25]<br>
+map([1, 4, 9, 16, 25], Math.sqrt); --> [1, 2, 3, 4, 5]<br></p>
+	<hr>
+	<label for="no">Enter numbers in array seperated by commas(do not use space)</label><input type="text" name="no" id="no">
+	
+	<button onclick="start()">Answer</button>
+	<p id="answer"></p>
+
+
+</body>
+</html>

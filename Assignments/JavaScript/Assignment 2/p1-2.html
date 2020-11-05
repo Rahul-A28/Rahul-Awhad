@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page 1 Question 2</title>
+	<script type="text/javascript">
+		
+		function square(x){
+			return x*x;
+		}
+		function double(x){
+			return x*2;
+		}
+		function compose(f1,f2){
+			return function (k){return f1(f2(k))};
+		}
+
+
+		var f1 = compose(square,double);
+		var f2 = compose(double,square);
+		function start(){
+			var x = parseInt(document.getElementById("no").value);
+			var ans = f1(x);
+			var ans2 = f2(x);
+			document.getElementById("answer").innerHTML = "Value for f1 is: " + ans + "<br>Value for f2 is: " + ans2;
+		}
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+	<p>2. Make a function called compose that takes two functions f1 and f2 and returns a new function that,
+when called on a value, will return f1(f2(value)). Assume that f1 and f2 each take exactly one argument.<br>
+var f1 = compose(square, double);<br>
+f1(5); --> 100<br>
+f1(10); --> 400<br>
+var f2 = compose(double, square);<br>
+f2(5); --> 50<br>
+f2(10); --> 200<br></p>
+	<hr>
+	<label for="no">Enter a number</label><input type="text" name="no" id="no">
+	
+	<button onclick="start()">Answer</button>
+	<p id="answer"></p>
+
+
+</body>
+</html>

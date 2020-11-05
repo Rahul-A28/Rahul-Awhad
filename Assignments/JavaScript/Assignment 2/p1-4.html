@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page 1 Question 3</title>
+	<script type="text/javascript">
+		
+		function map(arr,test){
+			var ans = [];
+			for(var i=0;i<arr.length;i++){
+				
+				ans.push(test(arr[i]));
+							
+			}
+			
+			return ans;
+
+		}
+
+		function square(x){
+			return x*x;
+		}
+
+
+		function start(){
+			var x = document.getElementById("no").value.split(",");
+
+			for(var i=0;i<x.length;i++){
+				x[i] = parseInt(x[i]);
+			}
+
+
+			var ans = map(x,square);
+			var ans2 = map(ans,Math.sqrt);
+			document.getElementById("answer").innerHTML = "Answer: Squares -> " + ans + "<br>Square roots -> " + ans2;
+		}
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+	<p>4. Recent JavaScript versions added the “map” method of arrays, as we saw in the notes and used in
+the previous set of exercises. But, in earlier JavaScript versions, you had to write it yourself. Make
+a function called “map” that takes an array and a function, and returns a new array that is the result
+of calling the function on each element of the input array. Don’t use map, filter, or reduce.<br>
+map([1, 2, 3, 4, 5], square); --> [1, 4, 9, 16, 25]<br>
+map([1, 4, 9, 16, 25], Math.sqrt); --> [1, 2, 3, 4, 5]<br>
+Hint: remember the push method of arrays.<br></p>
+	<hr>
+	<label for="no">Enter numbers in array seperated by commas(do not use space)</label><input type="text" name="no" id="no">
+	
+	<button onclick="start()">Answer</button>
+	<p id="answer"></p>
+
+
+</body>
+</html>
