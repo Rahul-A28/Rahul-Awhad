@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page 1 Question 7</title>
+</head>
+<body>
+	<p>7. Do the same with JSON.parse. You have to follow strict JSON rules in this case.</p>
+<hr>
+<p>Look in console for output</p>
+
+<script type="text/javascript">
+	
+	var str = {firstName:"abc",lastName:"xyz"};
+	var n = JSON.parse('{"firstName":"abc","lastName":"xyz"}');
+	console.log(n);
+	console.log("Middle name: " + n.middleName);
+	n.middleName = "midd";
+	console.log("After assigning middle name:");
+	console.log("Middle name: " + n.middleName);
+	console.log(typeof(n));
+
+
+
+
+
+</script>
+
+</body>
+</html>

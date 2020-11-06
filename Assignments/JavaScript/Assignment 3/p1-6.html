@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page 1 Question 6</title>
+</head>
+<body>
+	<p>6. Create a string that contains what looks like an object with firstName and lastName properties. Use
+“eval” to turn it into a real object, and test it the same way you did with the previous object that you
+created directly.</p>
+<hr>
+<p>Look in console for output</p>
+
+<script type="text/javascript">
+	
+	var str = {firstName:"abc",lastName:"xyz"};
+	var n = eval("str");
+	console.log(n);
+	console.log("Middle name: " + n.middleName);
+	n.middleName = "midd";
+	console.log("After assigning middle name:");
+	console.log("Middle name: " + n.middleName);
+	console.log(typeof(n));
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page 1 Question 2</title>
+</head>
+<body>
+	<p>2. Add a getArea method. Use the prototype property.</p>
+<hr>
+<p>Look in console for output</p>
+<script type="text/javascript">
+	
+	var Rectangle = function (width,height){
+		this.width = width;
+		this.height = height;
+	}
+
+	Rectangle.prototype.getArea = function(){
+		return this.width*this.height;
+	}
+
+	var r1 = new Rectangle(200,300);
+	console.log(r1);
+	console.log("Area: " + r1.getArea());
+
+
+
+
+</script>
+
+</body>
+</html>
