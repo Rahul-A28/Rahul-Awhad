@@ -12,7 +12,7 @@ r.hieght = 50;<br>
 r.getArea(); --> 20 // Not 200<br></p>
 <hr>
 <p>Look in console for output</p>
-<p>Answer: Since the spelling of height is mis-spelled while assigning new value 50, a new object field is created as 'hieght':50. But while getting the area we get the multiplication of height and width which is 20.</p>
+<p>Answer: If we do not use 'this' key-word then we assign new value to height and width becomes undefined and we cannot get desired result.</p>
 <script type="text/javascript">
 	
 	var Rectangle = function (width,height){
@@ -25,7 +25,7 @@ r.getArea(); --> 20 // Not 200<br></p>
 	}
 
 	var r = new Rectangle(4,5);
-	r.hieght = 50;
+	r.height = 50;
 	console.log("Area: " + r.getArea());
 	console.log(r);
 
