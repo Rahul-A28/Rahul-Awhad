@@ -1,4 +1,4 @@
-
+// page1 question3
 
 function flipCoin(){
 	var no = document.getElementById("no").value;
