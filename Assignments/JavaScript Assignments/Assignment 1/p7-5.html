@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html name="html">
+<head>
+	<title>Page 7 Question 5</title>
+	<style type="text/css">
+		body{
+			font-family: arial;
+			font-size: 80%;
+			background-color: #eee;
+			margin: 20px;
+		}
+
+
+		tr:nth-child(even) {background-color: #eee;}
+		tr:nth-child(odd) {background-color: #fff;}
+		th{
+			background-color: black;
+			color: white;
+			border: 1px solid;
+		}
+		table,td{
+			border: 1px solid;
+		}
+
+	</style>
+</head>
+<body onclick="info()" name="body1">
+	<form onsubmit="event.preventDefault(); check();" name="form">
+		<textarea rows="6" cols="30" style="float: right;" id="info">This area provides you some help text</textarea>
+		<label for="">Name:</label><input type="text" name="name" id="name" required><br>
+		<label for="">Email:</label><input type="email" name="email" id="email" required><br>
+		<p style="font-weight: bold">Toppings:</p>
+		Extra Cheese:<input type="checkbox" name="toppings" value="Extra Cheese">Pepperoni:<input type="checkbox" name="toppings" value="Pepperoni">Olives:<input type="checkbox" name="toppings" value="Olives">Pepper:<input type="checkbox" name="toppings" value="Pepper">Bacon:<input type="checkbox" name="toppings" value="Bacon">Tomatoes:<input type="checkbox" name="toppings" value="Tomatoes">Mushrooms:<input type="checkbox" name="toppings" value="Mushrooms"><br>
+		<p style="font-weight: bold; display:inline-block; ">How do you want to deliver your pizza!</p> Delivery<input type="radio" id="del1" name="delivery" value=5 required> Pickup<input type="radio" name="delivery" value=0><br>
+		<label for="tip" style="font-weight: bold;">Tip?</label>
+		<select name="tip" id="tip">
+		    <option value=15>15%</option>
+		    <option value=20>20%</option>
+		    <option value=25>25%</option>
+		</select><br>
+		<hr>
+		<label for="address">Address:</label><br>
+		<textarea name="address" id="address" rows="7" cols="40" required></textarea> <br>
+		<input type="submit" name="submit" ><input type="reset" name="reset"><button id="summary" onclick="display()">Show Summary</button>
+
+	</form>
+
+	<table id="table1"></table>
+
+	<script type="text/javascript" src="p7-5.js">
+		
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page 1 Question 1</title>
+	<script type="text/javascript">
+		
+		function square(x){
+			return x*x;
+		}
+		function double(x){
+			return x*2;
+		}
+		function composedValue(square, double, x){
+			return square(double(x));
+		}
+		function start(){
+			var x = parseInt(document.getElementById("no").value);
+			var ans = composedValue(square,double,x);
+			document.getElementById("answer").innerHTML = "Value for composedValue(square,double," + x + ") is " + ans;
+		}
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+	<p>1. Make a function called composedValue that takes two functions f1 and f2 and a value and returns
+	f1(f2(value)), i.e., the first function called on the result of the second function called on the value.<br>
+	function square(x) { return(x*x); }<br>
+	function double(x) { return(x*2); }<br>
+	composedValue(square, double, 5); --> 100 // I.e., square(double(5))<br></p>
+	<hr>
+	<label for="no">Enter a number</label><input type="text" name="no" id="no">
+	
+	<button onclick="start()">Answer</button>
+	<p id="answer"></p>
+
+
+</body>
+</html>

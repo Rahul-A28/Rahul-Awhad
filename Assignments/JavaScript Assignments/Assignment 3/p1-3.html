@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page 1 Question 3</title>
+</head>
+<body>
+	<p>3. Assuming that the Rectangle constructor takes a width and a height, why does the following output
+20 instead of 200? (Hint: if you see an answer that seems too obvious to be what I am looking for,
+it probably is the answer I am looking for.)<br>
+Rectangle r = new Rectangle(4, 5);<br>
+r.hieght = 50;<br>
+r.getArea(); --> 20 // Not 200<br></p>
+<hr>
+<p>Look in console for output</p>
+<p>Answer: If we do not use 'this' key-word then we assign new value to height and width becomes undefined and we cannot get desired result.</p>
+<script type="text/javascript">
+	
+	var Rectangle = function (width,height){
+		this.width = width;
+		this.height = height;
+	}
+
+	Rectangle.prototype.getArea = function(){
+		return this.width*this.height;
+	}
+
+	var r = new Rectangle(4,5);
+	r.height = 50;
+	console.log("Area: " + r.getArea());
+	console.log(r);
+
+
+
+
+</script>
+
+</body>
+</html>
