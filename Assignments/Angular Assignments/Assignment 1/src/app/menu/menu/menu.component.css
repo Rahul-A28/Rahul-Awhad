@@ -1,0 +1,7 @@
+ul{
+    margin-top: 50px;
+	list-style-position: inside;
+}
+div{
+    display: inline-block;
+}

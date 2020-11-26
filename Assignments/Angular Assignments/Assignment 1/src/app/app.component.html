@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <style type="text/css">
+    body{
+      text-align: center;
+    }
+      a{
+        margin:20px;
+        padding: 20px;
+        font-size: 30px;;
+        background:lightblue;
+        color:white;
+        text-decoration: none;
+        border-radius: 10px;
+      }
+      a:hover{
+        background: darkslateblue;
+        transition: 0.5s ease-in;
+      }
+    </style>
+    <!-- <base href="/"> -->
+  </head>
+  <body>
+    <h1>Who Are You ?</h1>
+    <a routerLink="/User" (click)="isAdmin('user')">User</a>
+    <a routerLink="/Admin" (click)="isAdmin('Admin')">Admin</a>
+    <router-outlet></router-outlet>
+  </body>
+</html>

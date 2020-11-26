@@ -1,0 +1,19 @@
+<!-- <p>restaurant works!</p> -->
+
+<app-admin-component></app-admin-component>
+<h2 *ngIf="isAdmin">You are now an Admin</h2>
+<h2 *ngIf="!isAdmin">You are now an User</h2>
+<ul *ngFor="let restaurant of resdata">
+    <li>Restaurant Name :{{restaurant.rname}}
+        <button (click)="toMenu(restaurant.rname)">Menu</button>
+        <div *ngIf="isAdmin">
+        <button (click)="editRestaurantName(restaurant.rname)">Edit Restaurant Name</button>
+        <button (click)="deleteRestaurant(restaurant.rname)">Delete Restaurant</button>
+        </div>
+        </li>
+</ul>
+
+<div *ngIf="isAdmin">
+    <input #newRestaurant type="text"><button (click)="addRestaurant(newRestaurant.value)">Add Restaurant</button>
+</div>
+

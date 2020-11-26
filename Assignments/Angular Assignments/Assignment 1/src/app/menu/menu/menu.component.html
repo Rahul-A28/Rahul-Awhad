@@ -1,0 +1,27 @@
+<h2>Menu</h2>
+<ul *ngFor="let menuItem of requiredMenu">
+    <li><strong>Item: </strong>{{menuItem.name}} <strong>Price: </strong>{{menuItem.price}}
+     <div *ngIf="isAdmin">   
+     <button (click)="editItem(restaurantName,menuItem.name)">Edit Item</button>   
+    <button (click)="deleteMenuItem(restaurantName,menuItem.name)">Delete Menu Item</button>
+    </div>
+    <div *ngIf="!isAdmin">
+        <input type="checkbox" name="selectedItems" class="selectedItems" value={{menuItem.price}}>
+    </div>
+    </li>
+</ul>
+
+<div *ngIf="!isAdmin && !confirm">
+    <button (click)="getSelectedItems()">Order</button>
+</div>
+
+<div *ngIf="isAdmin">
+Food Name:<input #newItem type="text">Price:<input #newPrice type="text">
+<button (click)="addMenu(restaurantName,newItem.value,newPrice.value)">Add New Menu Item</button>
+</div>
+
+<div *ngIf="confirm">
+    <h3>Your Total will be Rs.{{sum}}. Do you want to confirm the Order?</h3>
+    <button (click)="orderSuccess()">Yes</button>
+    <button (click)="orderFailed()">No</button>
+</div>
