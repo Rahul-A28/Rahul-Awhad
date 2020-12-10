@@ -1,0 +1,11 @@
+#main {
+    /* margin-left: 300px; */
+    transition: margin-left .5s;
+    padding: 16px;
+    /* margin-left: 50px; */
+  }
+
+  img.card-img-top{
+      height:200px;
+      width:200px;
+  }

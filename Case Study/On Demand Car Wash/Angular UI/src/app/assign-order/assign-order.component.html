@@ -1,0 +1,29 @@
+<app-side-bar></app-side-bar>
+<div id="main">
+
+    <h2>Order Id: {{displayOrder._id}}</h2>
+    <h4>Customer Name: {{displayOrder.custName}}</h4>
+    <h4>Package Name: {{displayOrder.packageName}}</h4>
+    <h4>Price: {{displayOrder.packagePrice}}</h4>
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let washer of washers">
+            <td>{{washer.firstName}}</td>
+            <td>{{washer.lastName}}</td>
+            <td>{{washer.email}}</td>
+            <td>{{washer.phone}}</td>
+            <td><button type="button" class="btn btn-success" (click)="assignOrder(washer)">Assign Order</button></td>
+          </tr>          
+        </tbody>
+      </table>
+</div>

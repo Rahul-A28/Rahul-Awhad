@@ -1,0 +1,16 @@
+#correction{
+    display: inline-block;
+    margin: 30px;
+}
+#main {
+    /* margin-left: 250px; */
+    transition: margin-left .5s;
+    padding: 16px;
+    /* margin-left: 50px; */
+  }
+  tr{
+    cursor: pointer;
+  }
+  tr:hover{
+    background-color: #f7f4f4;
+  }

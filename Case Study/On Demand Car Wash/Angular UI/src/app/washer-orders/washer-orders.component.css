@@ -1,0 +1,11 @@
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+    /* margin-left: 300px; */
+  }
+  tr{
+    cursor: pointer;
+  }
+  tr:hover{
+    background-color: #f7f4f4;
+  }
