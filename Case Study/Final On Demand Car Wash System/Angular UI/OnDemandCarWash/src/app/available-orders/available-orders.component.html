@@ -1,0 +1,32 @@
+<app-side-bar></app-side-bar>
+<div id="main">
+    <h1>Available Orders</h1>
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Order Posted On</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Customer Email</th>
+            <th scope="col">Customer Phone</th>
+            <th scope="col">Wash Package</th>
+            <th scope="col">Price</th>
+            <th scope="col">Accept ?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of availableOrders">
+            <td>{{order.orderPosted}}</td>
+            <td>{{order.custName}}</td>
+            <td>{{order.custId}}</td>
+            <td>{{order.custPhoneNo}}</td>
+            <td>{{order.packageName}}</td>
+            <td>{{order.packagePrice}}</td>
+            <td>
+              <button *ngIf="this.isWasher" type="button" class="btn btn-success" (click)="acceptOrder(order)">Accept</button>
+              <button *ngIf="this.isAdmin" type="button" class="btn btn-success" (click)="assignOrder(order)">Assign Order</button>
+            </td>
+          </tr>          
+        </tbody>
+      </table>
+      
+</div>

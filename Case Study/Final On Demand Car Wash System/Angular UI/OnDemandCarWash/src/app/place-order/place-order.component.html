@@ -1,0 +1,205 @@
+<app-side-bar></app-side-bar>
+
+
+
+
+<div id="main">
+  <h1>Place Your Wash Order</h1>
+<div class="container">
+  <div id="removetoppadding" class="row mt-4 align-items-center" style="padding-top: 0;">
+      
+        <h4>Enter Car Location Information</h4>
+        <hr>
+          <form #placeOrderForm="ngForm" >
+              <div class="row">
+
+                  <!-- Car Name -->
+                  <div class="input-group col-lg-6 mb-4">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text bg-white px-4 border-md border-right-0">
+                              <i class="fa fa-car text-muted"></i>
+                          </span>
+                      </div>
+                      <input #carName="ngModel" id="carName" type="text" name="carName" placeholder="Car Name" class="form-control bg-white border-left-0 border-md" ngModel required>
+                      <small style="color: red;" [class.d-none]="carName.valid || carName.untouched">Car Name is required</small>
+                  </div>
+
+                  
+
+                  <!-- Car Plate No -->
+                  
+                  <div class="input-group col-lg-6 mb-4">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text bg-white px-4 border-md border-right-0">
+                            <i class="fa fa-car text-muted"></i>
+                          </span>
+                      </div>
+                       <input #carPlateNo="ngModel" id="carPlateNo" type="text" name="carPlateNo" placeholder="Car Plate No" class="form-control bg-white border-left-0 border-md" ngModel required>
+                       <small style="color: red;" [class.d-none]="carPlateNo.valid || carPlateNo.untouched">Car Plate No. is required</small>
+                  </div>
+
+                  <!-- Car street address -->
+                  <div class="input-group col-lg-12 mb-4">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-white px-4 border-md border-right-0">
+                            <i class="fa fa-car text-muted"></i>
+                        </span>
+                    </div>
+                    <input #street="ngModel" [(ngModel)]="this.street1" id="street" type="text" name="street" placeholder="Car street Address" class="form-control bg-white border-left-0 border-md" ngModel required>
+                    <small style="color: red;" [class.d-none]="street.valid || street.untouched">Street is required</small>
+                </div>
+                                             
+
+                  <!-- State -->
+                  <div class="input-group col-lg-6 mb-4">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text bg-white px-4 border-md border-right-0">
+                            <i class="fa fa-building text-muted"></i>
+                          </span>
+                      </div>
+                      <input #state="ngModel" [(ngModel)]="this.state1" id="state" type="text" name="state" placeholder="State Name" class="form-control bg-white border-left-0 border-md" ngModel required>
+                      <small style="color: red;" [class.d-none]="state.valid || state.untouched">State is required</small>
+                  </div>
+
+                  <!-- City -->
+                  <div class="input-group col-lg-6 mb-4">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text bg-white px-4 border-md border-right-0">
+                            <i class="fa fa-building text-muted"></i>
+                          </span>
+                      </div>
+                      <input #city="ngModel" [(ngModel)]="this.city1" id="city" type="text" name="city" placeholder="City Name" class="form-control bg-white border-left-0 border-md" ngModel required> 
+                      <small style="color: red;" [class.d-none]="city.valid || city.untouched">City is required</small>
+                  </div>
+
+                  
+
+                  <h4>Mark your Car Location on Map</h4>
+                  <hr>
+                  <div class="form-group col-lg-12 mx-auto mb-0">
+                      <div id="mapid2" style="height:350px; max-width:700px"></div>
+                      <form #latlng="ngForm" style="text-align: center;">
+                          : Latitude<input name="lat" [ngModel]="this.lat" type="text" id="lat"  disabled>: Longitude
+                          <input name="lng" [ngModel]="this.lng" type="text" id="lng"  disabled>
+                      </form>
+        
+                      
+                  </div>
+
+                  
+
+                  <h4>Select One Car Wash Package</h4>
+                  <hr>
+                  <!-- Package Information-->
+                  <div class="input-group col-lg-12 mb-4">
+                    <div class="ui link cards">
+                      
+                      <div class="card">
+                        <div class="image">
+                          <img class="cardshrink" src="../assets/carwash1.png">
+                        </div>
+                        <div class="content">
+                          <div class="header">Standard</div>
+                          <div class="meta">
+                            <a>Package</a>
+                          </div>
+                          <div class="description">
+                            Standard Package Offers you the most affordable price to wash your car.<br> The Standard Package will include:<br>
+                            <ul>
+                              <li>Complete Exterior Hand Wash</li>
+                              <li>Exterior Window Wash</li>
+                            </ul>
+                          </div>
+                          <div class="header price">Price: Rs. 700</div>
+                        </div>
+                        <div class="extra content">
+                          <input #type="ngModel" id="radiobutton" type="radio" name="package" value="Standard 700" ngModel required>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div class="image">
+                          <img class="cardshrink" src="../assets/carwash2.png">
+                        </div>
+                        <div class="content">
+                          <div class="header">Deluxe</div>
+                          <div class="meta">
+                            <span class="date">Package</span>
+                          </div>
+                          <div class="description">
+                            Deluxe package offer you exterior as well as interior cleaning at your doorstep.<br>
+                            The Package includes:<br>
+                            <ul>
+                              <li>Complete Exterior Hand Wash</li>
+                              <li>Exterior Window Wash</li>
+                              <li>Interior Matress Cleaning</li>
+                              <li>Interior Seats Cleaning</li>
+                            </ul>
+                          </div>
+                          <div class="header price">Price: Rs. 1500</div>
+                        </div>
+                        <div class="extra content">
+                          <input #type="ngModel" id="radiobutton" type="radio" name="package" value="Deluxe 1500" ngModel required>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div class="image">
+                          <img class="cardshrink" src="../assets/carwash3.png">
+                        </div>
+                        <div class="content">
+                          <div class="header">Premium</div>
+                          <div class="meta">
+                            <a>Package</a>
+                          </div>
+                          <div class="description">
+                            The Premium Package offers you to take your car to our garage and provide both exterior as well as interior cleaning. It will also include tires and rims cleaning.<br>
+                            This Package will include:<br>
+                            <ul>
+                              <li>Complete Exterior Hand Wash</li>
+                              <li>Exterior Window Wash</li>
+                              <li>Interior Matress Cleaning</li>
+                              <li>Interior Seats Cleaning</li>
+                              <li>Light Stain Removal (Interior)</li>
+                              <li>Interior Window Cleaning</li>
+                              <li>Vacuum Seats</li>
+                            </ul>
+                          </div>
+                          <div class="header price">Price: Rs. 2100</div>
+                        </div>
+                        
+                        <div class="extra content">
+                          <input #type="ngModel" id="radiobutton" type="radio" name="package" value="Premium 2100" ngModel required>
+                        </div>
+                      </div>
+                      <small style="color: red;" [class.d-none]="type.valid || type.untouched">Select Package Type</small>
+
+
+
+
+                    </div> <!--   End of card links -->
+
+                  </div> <!-- End of Row-->
+
+                 
+                  
+
+                  <h4>Place Your Order</h4>
+                  <hr>
+                  <!-- Submit Button -->
+                  <div class="form-group col-lg-12 mx-auto mb-0" style="margin: 20px auto;">
+                      <button [disabled]="placeOrderForm.form.invalid" class="btn btn-primary btn-block py-2" style="margin-bottom: 30px;" (click)="submitOrder(placeOrderForm.value)">
+                          <span class="font-weight-bold">Place Order</span>
+                      </button>
+                  </div>
+                
+                  
+
+              </div>
+              
+          </form>
+      <!-- </div> -->
+      
+  </div>
+</div>
+</div>

@@ -1,0 +1,25 @@
+<app-side-bar></app-side-bar>
+<div id="main">
+  <h1>Customers</h1>
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let customer of customers">
+            <td>{{customer.firstName}}</td>
+            <td>{{customer.lastName}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.phone}}</td>
+            <td><button type="button" class="btn btn-success" (click)="viewCustomer(customer)">View Profile</button></td>
+          </tr>          
+        </tbody>
+      </table>
+</div>

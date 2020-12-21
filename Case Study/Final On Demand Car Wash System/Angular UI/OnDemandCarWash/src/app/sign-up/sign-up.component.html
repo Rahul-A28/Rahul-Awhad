@@ -1,0 +1,181 @@
+
+
+
+<div class="container">
+    <div class="row py-5 mt-4 align-items-center">
+        <!-- For Demo Purpose -->
+        <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+            
+            <img id="logo1" src="../assets/SignUpLogo2.svg" alt="" class="img-fluid mb-3 d-none d-md-block">
+            <div id="mapid" style="height:350px; width:auto"></div>
+            <form #latlng="ngForm">
+                : Latitude<input name="lat" [ngModel]="this.lat" type="text" id="lat" class="input-group col-lg-6 mb-4" disabled>: Longitude
+                <input name="lng" [ngModel]="this.lng" type="text" id="lng" class="input-group col-lg-6 mb-4" disabled>
+            </form>
+            
+            <h6>Mark your Location Above for Better Location Mapping</h6>
+            
+            
+            
+        </div>
+
+        <!-- Registeration Form -->
+        <div class="col-md-7 col-lg-6 ml-auto">
+            <h2>Sign Up</h2>
+            <form #signUpForm="ngForm" >
+                <div class="row">
+
+                    <!-- First Name -->
+                    <div class="input-group col-lg-6 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-user text-muted"></i>
+                            </span>
+                        </div>
+                        <input #firstname="ngModel" id="firstName" type="text" name="firstName" placeholder="First Name" class="form-control bg-white border-left-0 border-md" ngModel required>
+                        <small style="color: red;" [class.d-none]="firstname.valid || firstname.untouched"> First name is Required</small>
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="input-group col-lg-6 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-user text-muted"></i>
+                            </span>
+                        </div>
+                        <input #lastName="ngModel" id="lastName" type="text" name="lastName" placeholder="Last Name" class="form-control bg-white border-left-0 border-md" ngModel required>
+                        <small style="color: red;" [class.d-none]="lastName.valid || lastName.untouched"> Last name is Required</small>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    
+                    <div class="input-group col-lg-7 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                Date of Birth:
+                            </span>
+                        </div>
+                         <input #dob="ngModel" id="dob" type="date" name="dob" placeholder="Date of Birth" class="form-control bg-white border-left-0 border-md" ngModel required>
+                         <small style="color: red;" [class.d-none]="dob.valid || dob.untouched"> Date is Required</small>
+                    </div>
+
+                    <!-- Email Address -->
+                    <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-envelope text-muted"></i>
+                            </span>
+                        </div>
+                        <input #email="ngModel" id="email" type="email" name="email" placeholder="Email Address" class="form-control bg-white border-left-0 border-md" ngModel required>
+                        <small style="color: red;" [class.d-none]="email.valid || email.untouched"> Email is Required</small>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-phone-square text-muted"></i>
+                            </span>
+                        </div>
+                        
+                        <input #phone="ngModel" id="phoneNumber" type="tel" name="phone" placeholder="Phone Number" class="form-control bg-white border-md border-left-0 pl-3" ngModel required>
+                        <small style="color: red;" [class.d-none]="phone.valid || phone.untouched"> Phone No. is Required</small>
+                    </div>.
+
+
+                    <!-- Job -->
+                    <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-black-tie text-muted"></i>
+                            </span>
+                        </div>
+                        <select #type="ngModel" id="type" name="type" class="form-control custom-select bg-white border-left-0 border-md" ngModel required>
+                            <option value="" disabled>Choose your Account Type</option>
+                            <option value="Customer">Customer</option>
+                            <option value="Washer">Washer</option>
+                            
+                        </select>
+                        <small style="color: red;" [class.d-none]="type.valid || type.untouched"> UserType is Required</small>
+                    </div>
+
+                    <!-- State -->
+                    <div class="input-group col-lg-6 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-cursor" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103zM2.25 8.184l3.897 1.67a.5.5 0 0 1 .262.263l1.67 3.897L12.743 3.52 2.25 8.184z"/>
+                                  </svg>
+                            </span>
+                        </div>
+                        <input #state="ngModel" id="state" [(ngModel)]="state1" type="text" name="state" placeholder="State Name" class="form-control bg-white border-left-0 border-md" ngModel required>
+                        <small style="color: red;" [class.d-none]="state.valid || state.untouched"> State is Required</small>
+                    </div>
+
+                    <!-- City -->
+                    <div class="input-group col-lg-6 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-building" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694L1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
+                                    <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
+                                  </svg>
+                            </span>
+                        </div>
+                        <input #city="ngModel" [(ngModel)]="city1" id="city" type="text" name="city" placeholder="City Name" class="form-control bg-white border-left-0 border-md" ngModel required> 
+                        <small style="color: red;" [class.d-none]="city.valid || city.untouched"> City is Required</small>
+                    </div>
+
+                    <!-- Street Adress -->
+                    <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bicycle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5zm1.5 2.443l-.508.814c.5.444.85 1.054.967 1.743h1.139L5.5 6.943zM8 9.057L9.598 6.5H6.402L8 9.057zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877h1.035zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z"/>
+                                  </svg>
+                            </span>
+                        </div>
+                        <input #street="ngModel" [(ngModel)]="street1" id="street" type="text" name="street" placeholder="Street Adress" class="form-control bg-white border-left-0 border-md" ngModel required>
+                        <small style="color: red;" [class.d-none]="street.valid || street.untouched"> Street is Required</small>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-lock text-muted"></i>
+                            </span>
+                        </div>
+                        <input #password="ngModel" id="password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md" ngModel required>
+                        <small style="color: red;" [class.d-none]="password.valid || password.untouched"> Password is Required</small>
+                    </div>
+
+                    
+                    <!-- Submit Button -->
+                    <div class="form-group col-lg-12 mx-auto mb-0">
+                        <button [disabled]="signUpForm.form.invalid" class="btn btn-primary btn-block py-2" (click)="submit(signUpForm.value)">
+                            <span class="font-weight-bold">Create your account</span>
+                        </button>
+                    </div>
+
+                    
+
+                    <!-- Already Registered -->
+                    <div class="text-center w-100">
+                        <p class="text-muted font-weight-bold">Already Registered? <a routerLink="/login" class="text-primary ml-2">Login</a></p>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+    
+    

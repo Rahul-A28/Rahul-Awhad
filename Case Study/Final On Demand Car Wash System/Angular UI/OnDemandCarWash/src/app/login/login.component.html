@@ -1,0 +1,64 @@
+
+
+
+<div class="container">
+    <div class="row py-5 mt-4 align-items-center">
+        <!-- For Demo Purpose -->
+        <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+            <img id="logo1" src="../assets/SignUpLogo2.svg" alt="" class="img-fluid mb-3 d-none d-md-block">
+            
+        </div>
+
+        <!-- Registeration Form -->
+        <div class="col-md-7 col-lg-6 ml-auto">
+            <form #loginForm="ngForm" >
+                <div class="row">
+
+                    <!-- First Name -->
+                    <div class="input-group col-lg-6 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-user text-muted"></i>
+                            </span>
+                        </div>
+                        <input #email="ngModel" id="email" type="email" name="email" placeholder="Email Id" class="form-control bg-white border-left-0 border-md" ngModel required>
+                        <small style="color: red;" [class.d-none]="email.valid || email.untouched">Email is Required</small>
+                    </div>
+                    
+                
+                 
+                    
+                    
+                    <!-- Password -->
+                    <div class="input-group col-lg-6 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-lock text-muted"></i>
+                            </span>
+                        </div>
+                        <input #password="ngModel" id="password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md" ngModel required>
+                        <small style="color: red;" [class.d-none]="password.valid || password.untouched">Password is required</small>
+                    </div>
+                
+                
+
+                    
+                    <!-- Submit Button -->
+                    <div class="form-group col-lg-12 mx-auto mb-0">
+                        <button  [disabled]="loginForm.form.invalid" class="btn btn-primary btn-block py-2" (click)="login(loginForm.value)">
+                            <span class="font-weight-bold">Login</span>
+                        </button>
+                    </div>
+
+                   
+
+                    <!-- Already Registered -->
+                    <div class="text-center w-100">
+                        <p class="text-muted font-weight-bold">Not Registered? <a routerLink="/signUp" class="text-primary ml-2">Sign Up</a></p>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

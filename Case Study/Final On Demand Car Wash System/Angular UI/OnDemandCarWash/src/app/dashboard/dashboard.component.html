@@ -1,0 +1,93 @@
+
+<app-side-bar></app-side-bar>
+<div id="main">
+    <h1>Dashboard</h1>
+    
+        <div *ngIf="this.isAdmin" class="row">
+            <div class="col-sm-4">
+                <div class="card" style="width:400px">
+                    ]
+                    <div class="card-body">
+                    <h4 class="card-title">View All Orders</h4>
+                    <p class="card-text">View all the orders from the database.</p>
+                    <a routerLink="/dashboard/viewAllOrders" class="btn btn-primary">View All Orders</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width:400px">
+                    
+                    <div class="card-body">
+                    <h4 class="card-title">View All Customers</h4>
+                    <p class="card-text">View all the customers from the database.</p>
+                    <a routerLink="/dashboard/viewCustomers" class="btn btn-primary">View Customers</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width:400px">
+                    
+                    <div class="card-body">
+                    <h4 class="card-title">View All Washers</h4>
+                    <p class="card-text">View all the washer from the database.</p>
+                    <a routerLink="/dashboard/viewWashers" class="btn btn-primary">View Washers</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card" style="width:400px">
+                    
+                    <div class="card-body">
+                    <h4 class="card-title">My Profile</h4>
+                    <p class="card-text">View your Profile Information</p>
+                    <a routerLink="/dashboard/profile" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width:400px">
+                    
+                    <div class="card-body">
+                    <h4 class="card-title">My Orders</h4>
+                    <p class="card-text">Browse through all the orders related to you..</p>
+                    <a *ngIf="this.isCustomer || this.isAdmin" routerLink="/dashboard/myOrders" class="btn btn-primary">My Orders</a>
+                    <a *ngIf="this.isWasher" routerLink="/dashboard/washerOrders" class="btn btn-primary">View Customers</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="row">
+            <div *ngIf="this.isAdmin || this.isWasher" class="col-sm-4">
+                <div class="card" style="width:400px">
+                    
+                    <div class="card-body">
+                    <h4 class="card-title">Available Orders to Accept</h4>
+                    <p class="card-text">Browse through all the available orders in your area.</p>
+                    <a routerLink="/dashboard/availableOrders" class="btn btn-primary">Available Orders</a>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="this.isAdmin || this.isCustomer" class="col-sm-4">
+                <div class="card" style="width:400px">
+                    
+                    <div class="card-body">
+                    <h4 class="card-title">Place Order</h4>
+                    <p class="card-text">Place a Wash Order</p>
+                    <a routerLink="/dashboard/placeOrder" class="btn btn-primary">Place a Order</a>
+                    
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        <br><br><br>
+        
+    
+</div>
+

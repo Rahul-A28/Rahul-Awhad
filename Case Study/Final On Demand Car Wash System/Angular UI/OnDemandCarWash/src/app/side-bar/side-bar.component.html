@@ -1,0 +1,23 @@
+
+<span id="options" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; OPTIONS</span>
+<p id="iswasher">isWasher: {{isWasher}}</p>
+<div id="mySidenav" class="sidenav">
+  
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a routerLink="/dashboard/profile"><span>My Profile</span></a>
+  <a *ngIf="!isWasher || isAdmin"  routerLink="/dashboard/placeOrder"><span>Place a Car Wash Order</span></a>
+  <a *ngIf="!isWasher || isAdmin" routerLink="/dashboard/myOrders"><span>My Orders</span></a>
+  <a *ngIf="isWasher || isAdmin" routerLink="/dashboard/availableOrders"><span>Available Orders</span></a>
+  <a *ngIf="isAdmin" routerLink="/dashboard/viewAllOrders"><span>View All Orders</span></a>
+  <a *ngIf="isWasher" routerLink="/dashboard/washerOrders"><span>My Orders</span></a>
+  <a *ngIf="isAdmin" routerLink="/dashboard/viewCustomers"><span>View Customers</span></a>
+  <a *ngIf="isAdmin" routerLink="/dashboard/viewWashers"><span>View Washers</span></a>
+  
+  
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+  

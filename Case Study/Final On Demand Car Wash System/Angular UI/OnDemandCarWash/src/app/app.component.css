@@ -1,0 +1,18 @@
+
+
+nav.navbar.navbar-inverse{
+  margin:0;
+}
+nav{
+  border-radius: 0;
+}
+
+#loginbutton{
+  cursor: pointer;
+}
+
+#logoHeader{
+ 
+  width: 100%;
+  max-height: 100%;
+}
